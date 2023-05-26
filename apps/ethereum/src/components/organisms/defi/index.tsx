@@ -8,7 +8,7 @@ import { Networks } from "../../../helpers/config";
 
 export type SortOptions = "all" | "dexes" | "lending";
 
-const arraySortDestruct = (defiList: EthereumData) => {
+const arraySortDestruct = (defiList: any) => {
   let arrayKeys = Object.keys(defiList);
   let sortedTotalData: any[] = [];
   let sortedDefiList: EthereumData = defiList;
@@ -22,7 +22,7 @@ const arraySortDestruct = (defiList: EthereumData) => {
   return [sortedTotalData, sortedDefiList];
 };
 
-const arrayFilterDestruct = (defiList: EthereumData, searchTerm: string) => {
+const arrayFilterDestruct = (defiList: any, searchTerm: string) => {
   let arrayKeys = Object.keys(defiList);
   let sortedTotalData: any[] = [];
   let sortedDefiList: EthereumData = defiList;
