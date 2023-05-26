@@ -5,8 +5,9 @@ import Link from "next/link";
 import { useWindowSize } from "hooks";
 import { useAppStore } from "../../../store/store";
 import LoginOptions from "./loginOptions";
-import Networks from "./networks";
+import Chains from "./chains";
 import AddToken from "./addToken";
+import Networks from "./networks"
 
 const env: string = process.env.NEXT_PUBLIC_ENVIRONMENT!;
 const NavigationBar = () => {
@@ -31,10 +32,11 @@ const NavigationBar = () => {
           </Link>
         </div>
         <div className="flex ml-auto">
+          <Networks/>
           {walletInfo.walletConnection ? (
             <>
               <AddToken />
-              <Networks />
+              <Chains />
             </>
           ) : null}
           <LoginOptions />

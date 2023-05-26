@@ -23,20 +23,21 @@ const Networks = () => {
     const [networkList, setNetworkList] = useState<any[]>([]);
 
     useEffect(()=>{
-        const response = networks.filter((item)=>item.network !== 'Ethereum');
+        const response = networks.filter((item)=>item.network !== 'Cosmos');
         setNetworkList(response)
     },[])
 
     // selected network info based network connected
     const selectedNetwork = networks.find(
-        (item) => item.network === 'Ethereum'
+        (item) => item.network === 'Cosmos'
     );
 
     const dropCloseDownHandler = (value: boolean) => {
         setShow(value);
     };
 
-    console.log(networkList, "networkList");
+    console.log(selectedNetwork, "selectedNetwork")
+
     return (
         <>
             <Dropdown
