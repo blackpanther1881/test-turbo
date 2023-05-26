@@ -1,0 +1,282 @@
+.box-shadow-none {
+  box-shadow: none;
+}
+
+.side-bar-icon {
+  fill: #a6a6a6;
+}
+
+.navItemActive .side-bar-icon {
+  fill: #c73238;
+}
+
+.navItemActive .text {
+  color: #fcfcfc;
+  font-weight: 600;
+}
+
+img,
+video {
+  max-width: initial;
+}
+
+.moreListHeader.opened {
+  background: #1b1b1b;
+}
+
+.moreListHeader.opened .text {
+  color: #fcfcfc;
+  font-weight: 600;
+}
+
+.moreListHeader .side-bar-icon.arrow {
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+  width: 12px;
+  height: 14px;
+}
+
+.moreListHeader.opened .side-bar-icon.arrow {
+  fill: #fcfcfc;
+  transform: rotate(90deg);
+}
+
+.moreList {
+  transition: height 0.35s ease;
+}
+
+.moreList.active {
+  /*height: 0;*/
+  transition: height 0.35s ease;
+}
+
+.moreList .itemIcon {
+  fill: #a6a6a6;
+}
+
+.moreList a:hover {
+  color: #fcfcfc;
+}
+
+.moreList a:hover .itemIcon {
+  fill: #c73238;
+}
+
+.socialLinks .socialIcon {
+  fill: #a6a6a6;
+  width: 12px;
+  height: 12px;
+}
+
+/* tabs */
+.tabsHeaderList .tabItem:first-child {
+  border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.tabsHeaderList .tabItem:last-child {
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.tabItem.active {
+  background-color: #ececec;
+  color: #181818;
+}
+
+.option-item.active,
+.option-item:hover {
+  border: 1px solid rgba(236, 236, 236, 0.7);
+}
+.option-item:hover .option-heading,
+.option-item:hover .option-value,
+.option-item.active .option-heading,
+.option-item.active .option-value {
+  color: #fcfcfc;
+}
+
+.depositModal .modalDialog {
+  max-width: 600px;
+}
+
+.termsModal .modalDialog {
+  max-width: 700px;
+}
+
+.inputContainer:focus-within {
+  border: 1px solid rgba(252, 252, 252, 0.7);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.25);
+}
+
+/* sidebar */
+.close.offCanvas {
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.show.offCanvas {
+  transform: none;
+  transition: transform 0.4s ease-in-out;
+}
+
+.backDrop {
+  transition: opacity 0.15s linear;
+  background: #000;
+}
+
+.show .backDrop {
+  opacity: 0.5;
+}
+
+/* end sidebar */
+
+/* button */
+
+.large {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 0.719rem 1.5rem;
+}
+
+.medium {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+}
+
+.small {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 5px 20px;
+}
+/* collapse */
+
+.unStakeList {
+  transition: max-height 0.4s ease;
+}
+
+.unStakeList.active {
+  max-height: 300px;
+  overflow-x: auto;
+  transition: max-height 0.4s ease;
+}
+
+.unStakeListContainer {
+  max-height: 300px;
+  overflow-x: auto;
+}
+
+.unStakeListHeader.opened .collapseIcon {
+  transform: rotate(90deg);
+}
+
+.filterButton.active {
+  background: #ececec;
+  border: 1px solid #ececec;
+  color: #070b09;
+}
+
+@keyframes modalFadeIn {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+
+.modal.open {
+  animation: modalFadeIn 0.5s;
+}
+
+.modal {
+  /*animation-name: modalFade;*/
+  /*animation-duration: .3s;*/
+  animation: fadeout 0.4s;
+  /*animation:modalFadeOut 0.2s ease-out forwards;*/
+}
+
+/* overriding default modal style for staking modal */
+.stakeModal .modalDialog {
+  max-width: 577px;
+}
+
+/* overriding default modal style for claim modal */
+.claimModal .modalDialog {
+  max-width: 600px;
+}
+
+.stakeModal .modalBody,
+.claimModal .modalBody {
+  padding: 0;
+}
+
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.spinnerSecondary::after {
+  border: 0.2em solid #47c28b;
+  border-right-color: #9bccb6;
+  border-bottom-color: #9bccb6;
+  border-radius: 50%;
+  -webkit-animation: spinner-border 0.75s linear infinite;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+.collapseMenu {
+  max-height: 0;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+}
+
+.collapseMenu.active {
+  max-height: 400px;
+  height: auto;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
